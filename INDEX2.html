@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY BLOG </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 260px auto;
+      grid-template-rows: 75px auto 75px;
+      min-height: 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background:white;
+      border-radius: 10px;
+    }
+    header {
+      grid-area: header;
+      background: #2a4365;
+      color: white;
+      display: grid;
+      grid-template-columns: 50px auto 50px;
+      align-items: center;
+      padding: 0 2rem;
+      font-size: 60px;
+      font-family:  Arial, sans-serif;
+      font-weight: 500;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      min-height: 70px;
+    }
+     .header-title {
+      grid-column: 2;
+      justify-self: center;
+      text-align: center;
+      width: 100%;
+    }
+    .header-empty {
+      grid-column: 3;
+    }
+    aside {
+      grid-area: sidebar;
+      background: white;
+      padding: 2rem 1rem 2rem 2rem;
+      border-right: 1px solid #e2e8f0;
+      position: relative;
+      min-width: 0;
+    }
+    .sidebar-nav {
+      position: sticky;
+      top: 2rem;
+      font-family: Arial, sans-serif;
+    }
+    .sidebar-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 1.5rem;
+    }
+    .sidebar-nav a {
+      color: #2a4365;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.4em 0.8em;
+      border-radius: 6px;
+      display: block;
+      position: relative;
+    }
+    .sidebar-nav a:hover,
+    .sidebar-nav a:focus,
+    .sidebar-nav a.active {
+      background: #3182ce;
+      color: #fff;
+    }
+    main {
+      grid-area: main;
+      background: #fff;
+      padding: auto;
+      font-size: 1.25rem;
+      line-height: 1.7;
+    }
+    main h2 {
+      margin-top: 0;
+      color: #3182ce;
+      font-family:Arial, sans-serif;
+      margin-bottom: 0.4em;
+      font-size: 1.6rem;
+    }
+        body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #f7fafc;
+      color: #222;
+    }
+    main section {
+      margin-bottom: 2.8rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #e2e8f0;
+      scroll-margin-top: 80px;
+    }
+    main p {
+      color: #333;
+      margin-bottom: 1em;
+    }    
+    footer {
+      grid-area: footer;
+      background: #2b6cb0;
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      padding: 0 2rem;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "sidebar"
+          "main"
+          "footer";
+        border-radius: 0;
+      }
+
+    }
+    @media (max-width: 600px) {
+      .container {
+        grid-template-rows: 56px auto 1fr 46px;
+      }
+      header {
+        font-size: 1.1rem;
+        min-height: 56px;
+        grid-template-columns: 40px 1fr 40px;
+        padding: 0 0.5rem;
+      }
+      .sidebar-nav ul {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 0.5em;
+      }
+      .sidebar-nav a {
+        font-size: 80;
+        padding: 0.3em 0.7em;
+      }
+      main {
+        padding: 0.7rem 0.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="header-title">My Awesome Blog</span>
+      <span class="header-empty"></span>
+    </header>
+    <aside aria-label="Sidebar navigation">
+      <nav class="sidebar-nav" aria-label="Blog sections">
+        <ul>
+          <li><a href="#para1">Introduction</a></li>
+          <li><a href="#para2">History</a></li>
+          <li><a href="#para3">Culture & Spirituality</a></li>
+          <li><a href="#para4">Modern Jammu</a></li>
+          <li><a href="#para5">Conclusion</a></li>
+        </ul>
+      </nav>
+    </aside>
+<main id="main-content" >
+  <section id="para1">
+    <h2>Jammu: The City of Temples and Timeless Heritage</h2>
+    <p>Jammu, the winter capital of the Union Territory of Jammu and Kashmir, is fondly known as the "City of Temples." Located on the banks of the Tawi River, it is surrounded by the Shivalik mountain ranges and offers a perfect blend of spirituality, culture, and scenic beauty. From peaceful ghats to buzzing markets and revered shrines, Jammu reflects a unique harmony between tradition and transformation.</p>
+    <p>Over the years, it has evolved into a prominent spiritual and cultural destination in North India. With sacred spots like Raghunath Temple and the revered Vaishno Devi shrine nearby, Jammu attracts pilgrims from across the world. Yet, alongside its spiritual charm, Jammu is also growing into a vibrant educational and economic center.</p>
+  </section>
+
+  <section id="para2">
+    <h2>The Historical Roots of Jammu</h2>
+    <p>The origins of Jammu can be traced back to over 3,000 years. According to legend, it was founded by Raja Jambu Lochan after witnessing a tiger and a goat drinking water peacefully at the same riverbank—a sign of divine harmony. He established his kingdom here, giving birth to what we now know as Jammu.</p>
+    <p>Through centuries, Jammu saw the rule of various dynasties, including the Mughals, Sikhs, and the influential Dogra dynasty. The Dogra rulers not only fortified the city but also contributed to its architecture, administration, and cultural richness. Today, remnants of their legacy can be seen in forts, palaces, and traditional practices that still thrive in the region.</p>
+  </section>
+
+  <section id="para3">
+    <h2>Cultural & Spiritual Life in Jammu</h2>
+    <p>Jammu’s culture is a beautiful blend of Dogra traditions, folklore, music, and devotion. It’s a city where spirituality flows through everyday life. The Raghunath Mandir, with its seven shrines and golden spires, is one of the largest temple complexes in North India. Ranbireshwar Temple, dedicated to Lord Shiva, and the ancient Peer Kho cave temple also hold deep spiritual value.</p>
+    <p>Festivals like Lohri, Baisakhi, Navratri, and Diwali are celebrated with vibrant processions and community gatherings. Food is another cultural delight—Rajma Chawal, Kaladi cheese, and Khatta meat are local favorites. Jammu is where rituals meet rhythm, and where heritage meets hospitality.</p>
+  </section>
+
+  <section id="para4">
+    <h2>Jammu in the Modern Era</h2>
+    <p>While Jammu retains its spiritual charm, it’s rapidly embracing modern development. New highways, upgraded airports, and smart city initiatives are transforming the city into a future-ready destination. Institutions like IIT Jammu and Shri Mata Vaishno Devi University (SMVDU) are putting the city on India’s educational map.</p>
+    <p>Healthcare services, IT parks, and infrastructure growth are on the rise. Malls, multiplexes, and cafés are changing the cityscape, giving youth new avenues for growth and entertainment. Despite these changes, the core identity of Jammu—its simplicity and warmth—remains beautifully untouched.</p>
+  </section>
+
+  <section id="para5">
+    <h2>The Heart of Jammu: Conclusion</h2>
+    <p>Jammu is more than just a city—it's a feeling, a story that continues to unfold. Whether it’s the hum of temple bells, the aroma of street food, or the peaceful flow of the Tawi River, Jammu leaves an impression on everyone who visits. It’s a place where ancient legends live in modern times, and where every stone speaks of history, faith, and resilience.</p>
+    <p>As it continues to grow and modernize, Jammu stands as a shining example of how a city can hold onto its roots while reaching for the future. For locals and visitors alike, Jammu is not just a destination—it’s a home for the soul.</p>
+  </section>
+</main>
+    <footer>
+<p>MY BLOG MADE BY KPS9999</p>
+    </footer>
+  </div>
+</body>
+</html>
